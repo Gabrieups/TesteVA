@@ -22,20 +22,20 @@
     </div>
 
     <div style="display: flex; padding-top: 9vw;">
-        <div id="menu-container">
+        <form id="menu-container">
             <div id="menu-component">
                 <span id="titulo">Tipo:</span>
                 <div id="checkbox-items">
-                    <input type="checkbox" name="Armario" id="CheckID">
-                    <input type="checkbox" name="Cadeira" id="CheckID">
-                    <input type="checkbox" name="Desktop" id="CheckID">
-                    <input type="checkbox" name="Mesa" id="CheckID">
-                    <input type="checkbox" name="Gaveteiro" id="CheckID">
-                    <input type="checkbox" name="IPad" id="CheckID">
-                    <input type="checkbox" name="Monitor" id="CheckID">
-                    <input type="checkbox" name="Notebook" id="CheckID">
-                    <input type="checkbox" name="Smartphone" id="CheckID">
-                    <input type="checkbox" name="Ultrabook" id="CheckID">
+                    <input type="checkbox" value="a" name="Armario" id="CheckID">
+                    <input type="checkbox" value="c" name="Cadeira" id="CheckID">
+                    <input type="checkbox" value="d" name="Desktop" id="CheckID">
+                    <input type="checkbox" value="m" name="Mesa" id="CheckID">
+                    <input type="checkbox" value="g" name="Gaveteiro" id="CheckID">
+                    <input type="checkbox" value="i" name="IPad" id="CheckID">
+                    <input type="checkbox" value="m" name="Monitor" id="CheckID">
+                    <input type="checkbox" value="n" name="Notebook" id="CheckID">
+                    <input type="checkbox" value="s" name="Smartphone" id="CheckID">
+                    <input type="checkbox" value="u" name="Ultrabook" id="CheckID">
                 </div>
                 <div id="checkbox-span">
                     <span>Armario</span>
@@ -53,10 +53,10 @@
             <div id="menu-component">
                 <span id="titulo">Estado:</span>
                 <div id="checkbox-items">
-                    <input type="checkbox" name="Defeito" id="CheckID">
-                    <input type="checkbox" name="Bom" id="CheckID">
-                    <input type="checkbox" name="Muito Bom" id="CheckID">
-                    <input type="checkbox" name="Excelente" id="CheckID">
+                    <input type="checkbox" value="df" name="Defeito" id="CheckID">
+                    <input type="checkbox" value="b" name="Bom" id="CheckID">
+                    <input type="checkbox" value="mb" name="Muito Bom" id="CheckID">
+                    <input type="checkbox" value="e" name="Excelente" id="CheckID">
                 </div>
                 <div id="checkbox-span">
                     <span>Defeito</span>
@@ -73,7 +73,8 @@
                     <option value="Maior">Maior Preço</option>
                 </select>
             </div>
-        </div>
+            <button type="submit">Filtrar</button>
+        </form>
         <div style="display: flex;">
             <div id="ProdutosDisponiveis"></div>
         </div>

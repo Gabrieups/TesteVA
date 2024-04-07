@@ -21,7 +21,7 @@ body{
     padding-left: .5vw;
 }
 
-button{
+#header button{
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -129,4 +129,8 @@ button{
 
 #texto-equipamento{
     padding: 1vw;
+}
+
+*{
+    -webkit-tap-highlight-color: transparent;
 }
