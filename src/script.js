@@ -7,7 +7,7 @@
 
 function mostrarEquipamentos() {
     const container = document.getElementById("ProdutosDisponiveis");
-    container.innerHTML = ""; // Limpa a lista atual
+    container.innerHTML = "";
 
     equipamentos.forEach(equipamento => {
         const elemento = document.createElement("div");
