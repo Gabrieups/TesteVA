@@ -4,82 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venda de Ativos</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body onload="mostrarEquipamentos()">
-    <div id="header">
-        <div style=" display: flex; justify-content: space-between;align-items: center;">
-            <img id="imgLogo" src="src/images/1LogoVAW.png" alt="LogoVA">
-            <p style="font-size: 1.5em; font-weight: 600; color: #fff;">VENDA DE ATIVOS</p>
-            <button style="padding-right: 2vw;"><img src="src/images/sino.svg" alt="AlertClikBtn" style="width: 1.5vw;"></button>
+    <div class="main">
+        <div id="header">
+            <div style=" display: flex; justify-content: space-between;align-items: center;">
+                <img id="imgLogo" src="src/images/1LogoVAW.png" alt="LogoVA">
+                <p style="font-size: 1.5em; font-weight: 600; color: #fff;">VENDA DE ATIVOS</p>
+                <button style="padding-right: 2vw;"><img src="src/images/sino.svg" alt="AlertClikBtn" style="width: 1.5vw;"></button>
+            </div>
+
+            <div id="mainNavigation">
+                <a href="index.html" id="lnkHome">Home</a>
+                <a href="src/Views/CadastroProduto.html" id="lnkCadastroProduuto">Produto</a>
+                <a href="#" id="lnkHistorioProduto">Historico de Pedidos</a>
+            </div>
         </div>
 
-        <div id="mainNavigation">
-            <a href="#" id="lnkHome">Home</a>
-            <a href="#" id="lnkCadastroProduuto">Produto</a>
-            <a href="#" id="lnkHistorioProduto">Historico de Pedidos</a>
+        <div class="divPrincipal" style="display: flex; padding-top: 9vw;">
+            <div id="menu-container">
+                <div id="menu-component">
+                    <span id="titulo">Tipo:</span>
+                    <div id="checkbox-items">
+                        <input type="checkbox" value="a" name="Armario" id="CheckID">
+                        <input type="checkbox" value="c" name="Cadeira" id="CheckID">
+                        <input type="checkbox" value="d" name="Desktop" id="CheckID">
+                        <input type="checkbox" value="m" name="Mesa" id="CheckID">
+                        <input type="checkbox" value="g" name="Gaveteiro" id="CheckID">
+                        <input type="checkbox" value="i" name="IPad" id="CheckID">
+                        <input type="checkbox" value="m" name="Monitor" id="CheckID">
+                        <input type="checkbox" value="n" name="Notebook" id="CheckID">
+                        <input type="checkbox" value="s" name="Smartphone" id="CheckID">
+                        <input type="checkbox" value="u" name="Ultrabook" id="CheckID">
+                    </div>
+                    <div id="checkbox-span">
+                        <span>Armario</span>
+                        <span>Cadeira</span>
+                        <span>Desktop</span>
+                        <span>Mesa</span>
+                        <span>Gaveteiro</span>
+                        <span>IPad</span>
+                        <span>Monitor</span>
+                        <span>Notebook</span>
+                        <span>Smartphone</span>
+                        <span>Ultrabook</span>
+                    </div>
+                </div>
+                <div id="menu-component">
+                    <span id="titulo">Estado:</span>
+                    <div id="checkbox-items">
+                        <input type="checkbox" value="df" name="Defeito" id="CheckID">
+                        <input type="checkbox" value="b" name="Bom" id="CheckID">
+                        <input type="checkbox" value="mb" name="Muito Bom" id="CheckID">
+                        <input type="checkbox" value="e" name="Excelente" id="CheckID">
+                    </div>
+                    <div id="checkbox-span">
+                        <span>Defeito</span>
+                        <span>Bom</span>
+                        <span>Muito Bom</span>
+                        <span>Excelente</span>
+                    </div>
+                </div>
+                <div id="menu-component">
+                    <span id="titulo">Preço:</span>
+                    <select name="FiltroProco" id="SelectID">
+                        <option value="select">Selecione</option>
+                        <option value="Menor">Menor Preço</option>
+                        <option value="Maior">Maior Preço</option>
+                    </select>
+                </div>
+            </div>
+
+            <div style="display: flex;">
+                <div id="ProdutosDisponiveis"></div>
+            </div>
         </div>
     </div>
-
-    <div style="display: flex; padding-top: 9vw;">
-        <form id="menu-container">
-            <div id="menu-component">
-                <span id="titulo">Tipo:</span>
-                <div id="checkbox-items">
-                    <input type="checkbox" value="a" name="Armario" id="CheckID">
-                    <input type="checkbox" value="c" name="Cadeira" id="CheckID">
-                    <input type="checkbox" value="d" name="Desktop" id="CheckID">
-                    <input type="checkbox" value="m" name="Mesa" id="CheckID">
-                    <input type="checkbox" value="g" name="Gaveteiro" id="CheckID">
-                    <input type="checkbox" value="i" name="IPad" id="CheckID">
-                    <input type="checkbox" value="m" name="Monitor" id="CheckID">
-                    <input type="checkbox" value="n" name="Notebook" id="CheckID">
-                    <input type="checkbox" value="s" name="Smartphone" id="CheckID">
-                    <input type="checkbox" value="u" name="Ultrabook" id="CheckID">
-                </div>
-                <div id="checkbox-span">
-                    <span>Armario</span>
-                    <span>Cadeira</span>
-                    <span>Desktop</span>
-                    <span>Mesa</span>
-                    <span>Gaveteiro</span>
-                    <span>IPad</span>
-                    <span>Monitor</span>
-                    <span>Notebook</span>
-                    <span>Smartphone</span>
-                    <span>Ultrabook</span>
-                </div>
-            </div>
-            <div id="menu-component">
-                <span id="titulo">Estado:</span>
-                <div id="checkbox-items">
-                    <input type="checkbox" value="df" name="Defeito" id="CheckID">
-                    <input type="checkbox" value="b" name="Bom" id="CheckID">
-                    <input type="checkbox" value="mb" name="Muito Bom" id="CheckID">
-                    <input type="checkbox" value="e" name="Excelente" id="CheckID">
-                </div>
-                <div id="checkbox-span">
-                    <span>Defeito</span>
-                    <span>Bom</span>
-                    <span>Muito Bom</span>
-                    <span>Excelente</span>
-                </div>
-            </div>
-            <div id="menu-component">
-                <span id="titulo">Preço:</span>
-                <select name="FiltroProco" id="SelectID">
-                    <option value="select">Selecione</option>
-                    <option value="Menor">Menor Preço</option>
-                    <option value="Maior">Maior Preço</option>
-                </select>
-            </div>
-        </form>
-        <div style="display: flex;">
-            <div id="ProdutosDisponiveis"></div>
-        </div>
-    </div>
-
-    <script src="src/script.js"></script>
-    <script src="src/db.js"></script>
+    <script src="src/js/script.js"></script>
+    <script src="src/js/db.js"></script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Ativos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="main">
+        <div id="header">
+            <div style=" display: flex; justify-content: space-between;align-items: center;">
+                <img id="imgLogo" src="../images/1LogoVAW.png" alt="LogoVA">
+                <p style="font-size: 1.5em; font-weight: 600; color: #fff;">VENDA DE ATIVOS</p>
+                <button style="padding-right: 2vw;"><img src="../images/sino.svg" alt="AlertClikBtn" style="width: 1.5vw;"></button>
+            </div>
+
+            <div id="mainNavigation">
+                <a href="../../index.html" id="lnkHome">Home</a>
+                <a href="CadastroProduto.html" id="lnkCadastroProduuto">Produto</a>
+                <a href="#" id="lnkHistorioProduto">Historico de Pedidos</a>
+            </div>
+            
+            <div id="divProdutoCadastro">
+                <a href="#"><img src="../images/iconMais.svg" style="width: 1.5vw;">Novo produto</a>
+                <select name="drpFiltroProduto" id="drpFiltroProduto">
+                    <option selected>Selcione</option>
+                    <option value="">Nº Patrimônio</option>
+                    <option value="">Nº Série</option>
+                    <option value="">Lote</option>
+                </select>
+                <input type="text" placeholder="Filtrar">
+                <button type="submit"><img src="../images/iconBuscar.svg" alt="Buscar" style="width: 1.5vw;"></button>
+            </div>
+        </div>
+
+
+        <div class="divPrincipal" style="padding-top: 9vw;">
+
+            <div style="display: flex;">
+                <div id="ProdutosDisponiveis"></div>
+            </div>
+        </div>
+
+        <script src="../js/script.js"></script>
+        <script src="../js/db.js"></script>
+    </div>
+</body>
+</html>

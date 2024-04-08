@@ -9,6 +9,21 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* ------ superior -------- */
 #header{
     position: fixed;
     z-index: 10;
@@ -17,14 +32,8 @@ body{
 }
 
 #imgLogo{
-    width: 4vw;
+    width: 5vw;
     padding-left: .5vw;
-}
-
-#header button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
 }
 
 #mainNavigation{
@@ -38,12 +47,13 @@ body{
 #mainNavigation a{
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 1em;
     font-weight: 500;
     font-style: normal;
     color: #fff;
-    text-decoration: none;
     padding: 1.2%;
+    height: .25vw;
     transition-duration: .4s;
 }
 
@@ -52,6 +62,7 @@ body{
     color: #24226A;
 }
 
+/* --------- Venda Produto ------------ */
 #menu-container{
     position: relative;
     left: 4vw;
@@ -119,7 +130,7 @@ body{
     border-radius: .5vw;
     overflow: hidden;
     transition: ease-in-out .4s;
-    cursor: pointer;
+    color: #000;
 }
 
 #equipamentosId:hover{
@@ -131,6 +142,17 @@ body{
     padding: 1vw;
 }
 
-*{
-    -webkit-tap-highlight-color: transparent;
+/*---------- Cadastro Produto Defaut ----------------- */
+#divProdutoCadastro{
+    background-color: #24226A;
+    display: flex;
+    align-items: center;
 }
+
+#divProdutoCadastro a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
