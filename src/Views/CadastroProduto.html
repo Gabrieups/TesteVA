@@ -6,7 +6,7 @@
     <title>Venda de Ativos</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body onload="mostrarItens()">
     <div class="main">
         <div id="header">
             <div style=" display: flex; justify-content: space-between;align-items: center;">
@@ -20,25 +20,36 @@
                 <a href="CadastroProduto.html" id="lnkCadastroProduuto">Produto</a>
                 <a href="#" id="lnkHistorioProduto">Historico de Pedidos</a>
             </div>
-            
+
             <div id="divProdutoCadastro">
                 <a href="#"><img src="../images/iconMais.svg" style="width: 1.5vw;">Novo produto</a>
                 <select name="drpFiltroProduto" id="drpFiltroProduto">
-                    <option selected>Selcione</option>
-                    <option value="">Nº Patrimônio</option>
-                    <option value="">Nº Série</option>
-                    <option value="">Lote</option>
+                    <option selected>Selecione</option>
+                    <option value="NP">Nº Patrimônio</option>
+                    <option value="NS">Nº Série</option>
+                    <option value="Lt">Lote</option>
                 </select>
-                <input type="text" placeholder="Filtrar">
-                <button type="submit"><img src="../images/iconBuscar.svg" alt="Buscar" style="width: 1.5vw;"></button>
+                <div style="display: flex; align-items: center;">
+                    <input type="text" placeholder="Filtrar">
+                    <button type="submit" style="transition: .4s linear;"><img src="../images/iconBuscar.svg" alt="Buscar" style="width: 1.5vw;"></button>
+                </div>
             </div>
         </div>
 
 
         <div class="divPrincipal" style="padding-top: 9vw;">
 
-            <div style="display: flex;">
-                <div id="ProdutosDisponiveis"></div>
+            <div id="ProdutosAtivos">
+                <table>
+                    <thead id="headListaPedido">
+                        <tr>
+                            <td>nome</td>
+                            <td>status</td>
+                            <td>preço</td>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyListaPedido"></tbody>
+                </table>
             </div>
         </div>
 

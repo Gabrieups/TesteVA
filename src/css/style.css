@@ -23,6 +23,10 @@ button{
     cursor: pointer;
 }
 
+*{
+    outline: none;
+}
+
 /* ------ superior -------- */
 #header{
     position: fixed;
@@ -147,6 +151,11 @@ button{
     background-color: #24226A;
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    height: 3vw;
+    width: 100%;
+    margin-bottom: .5vw;
 }
 
 #divProdutoCadastro a{
@@ -154,5 +163,37 @@ button{
     align-items: center;
     justify-content: center;
     color: #fff;
+    transition: .4s linear;
+    font-size: 1vw;
 }
 
+#divProdutoCadastro button:hover, a:hover{
+    transform: scale(1.07);
+}
+
+#divProdutoCadastro input{
+    width: 10vw;
+    height: .8vw;
+    border-radius: 2vw;
+    border: #fff solid;
+    padding-inline: .5vw;
+    font-size: .8vw;
+    font-weight: 400;
+}
+
+#divProdutoCadastro select{
+    border: #fff solid;
+    border-radius: 2vw;
+    width: 8vw;
+    height: 1.2vw;
+    font-size: .8vw;
+}
+
+#ProdutosAtivos{
+    display: flex;
+    position: relative;
+    top: 4vw;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}

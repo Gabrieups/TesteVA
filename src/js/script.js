@@ -21,3 +21,16 @@ function mostrarEquipamentos() {
         container.appendChild(elemento);
     });
 }
+
+function mostrarItens() {
+    const container = document.getElementById("bodyListaPedido");
+    container.innerHTML = "";
+
+    equipamentos.forEach(equipamento => {
+        const elemento = document.createElement("tr");
+        elemento.innerHTML = `<td >${equipamento.nome}</td>
+                              <td>${equipamento.status}</td>     
+                              <td>${equipamento.preco}</td>`;
+        container.appendChild(elemento);
+    });
+}
