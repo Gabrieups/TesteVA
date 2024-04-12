@@ -26,7 +26,6 @@ button{
 *{
     outline: none;
 }
-
 /* ------ superior -------- */
 #header{
     position: fixed;
@@ -232,10 +231,9 @@ button{
 .mainPopupAlerta{
     background-color: #fff;
     width: 26vw;
-    height: 12vw;
+    min-height: 12vw;
     border: .2vw solid #24226A;
     border-radius: .5vw;
-    overflow: hidden;
 }
 
 #headerAlertaPopup{
