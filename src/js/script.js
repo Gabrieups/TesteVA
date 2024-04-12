@@ -1,10 +1,3 @@
-// function MostrarFiltro() {
-//     var filtros = document.getElementById("menu-container");
-//     filtros.classList.toggle('show');
-// }
-
-
-
 function mostrarEquipamentos() {
     const container = document.getElementById("ProdutosDisponiveis");
     container.innerHTML = "";
@@ -16,7 +9,7 @@ function mostrarEquipamentos() {
         elemento.innerHTML = `<p id="tipo-equipamento"style="display: none">${equipamento.tipo}</p>
                               <div style="height: 75%; overflow: hidden; display: flex; justify-content:center"><img style="width: 100%; height: 80%; object-fit: contain; padding: .5vw" alt="imgProduto" id="imgProduto" src="src/images/${equipamento.tipo}.png"/></div>
                               <div id="texto-equipamento"><p>${equipamento.nome}</p>
-                              <p style="color: green"><strong>${equipamento.status}<strong></p>
+                              <p style="color: green"><strong>${equipamento.estado}<strong></p>
                               <p>R$ ${equipamento.preco}</p></div>`;
         container.appendChild(elemento);
     });
@@ -28,9 +21,42 @@ function mostrarItens() {
 
     equipamentos.forEach(equipamento => {
         const elemento = document.createElement("tr");
-        elemento.innerHTML = `<td >${equipamento.nome}</td>
-                              <td>${equipamento.status}</td>     
-                              <td>${equipamento.preco}</td>`;
+        elemento.innerHTML = `<td>${equipamento.id}</td>
+                              <td>${equipamento.nome}</td>
+                              <td>${equipamento.estado}</td>     
+                              <td style="border: none; border-bottom-right-radius: 1vw;">${equipamento.preco}</td>`;
         container.appendChild(elemento);
     });
+}
+
+function imgButtonAlertClick(){
+    const PopUp = document.getElementById("divTopoPopUp");
+    PopUp.style.visibility = "visible";
+}
+
+function imgClose(){
+    const PopUp = document.getElementById("divTopoPopUp");
+    PopUp.style.visibility = "hidden";
+}
+
+function btnSalvarAlerta(){
+    const select = document.getElementById("drpRemoveAlerta").value;
+    const imgAlerta = document.getElementById("imgAlerta");
+    const txt = document.getElementById("txtAlerta")
+
+
+    if(select == "S"){
+        if (imgAlerta.src.includes("sino.svg")){
+            imgAlerta.src = "src/images/sino_cortado.svg";
+            txt.textContent = "Deseja remover o alerta de produtos disponíveis para a compra ?";
+            imgClose();
+        } else {
+            imgAlerta.src = "src/images/sino.svg";
+            txt.textContent = "Deseja ativar o alerta de produtos disponíveis para a compra ?";
+            imgClose();
+        }
+
+    } else {
+        imgClose();
+    }
 }
