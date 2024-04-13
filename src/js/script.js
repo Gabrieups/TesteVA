@@ -49,11 +49,11 @@ function btnSalvarAlerta(){
 
     if(select == "S"){
         if (imgAlerta.src.includes("sino.svg")){
-            imgAlerta.src = "/src/images/sino_cortado.svg";
+            imgAlerta.src = "src/images/sino_cortado.svg";
             txt.textContent = "Deseja remover o alerta de produtos disponíveis para a compra ?";
             imgClose();
         } else {
-            imgAlerta.src = "/src/images/sino.svg";
+            imgAlerta.src = "src/images/sino.svg";
             txt.textContent = "Deseja ativar o alerta de produtos disponíveis para a compra ?";
             imgClose();
         }
