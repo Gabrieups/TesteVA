@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venda de Ativos</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body onload="mostrarEquipamentos()">
     <div class="main">
@@ -12,7 +12,7 @@
             <div class="mainPopupAlerta">
                 <div id="headerAlertaPopup">
                     <p style="color: #fff; font-size: 1.3vw;">Configuração de Alerta</p>
-                    <button onclick="imgClose()"><img src="../images/close.svg" alt="close" style="width: 1.5vw; position: relative; bottom: 1vw;"></button>
+                    <button onclick="imgClose()"><img src="src/images/close.svg" alt="close" style="width: 1.5vw; position: relative; bottom: 1vw;"></button>
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: center;">
                     <p id="txtAlerta" style="font-size: .9vw;">Deseja ativar o alerta de produtos disponíveis para a compra ?</p>
@@ -20,22 +20,22 @@
                         <option value="S">Sim</option>
                         <option value="N">Não</option>
                     </select>
-                    <button onclick="btnSalvarAlerta()"><img src="../images/save.svg" alt="iconSave" style="width: 1.5vw; position: relative; margin: .5vw;"></button>
+                    <button onclick="btnSalvarAlerta()"><img src="src/images/save.svg" alt="iconSave" style="width: 1.5vw; position: relative; margin: .5vw;"></button>
                 </div>
             </div>
         </div>
         <div id="header">
             <div style=" display: flex; justify-content: space-between;align-items: center;">
                 <div style="display: flex;">
-                    <img id="imgLogo" src="../images/1LogoVAW.png" alt="LogoVA">
+                    <img id="imgLogo" src="src/images/1LogoVAW.png" alt="LogoVA">
                     <p style="font-size: 1vw; font-weight: 600; color: #fff; width: 15vw; align-items: flex-end; display: flex;">VENDA DE ATIVOS</p>
                 </div>
                 <div id="mainNavigation">
                     <a href="index.html" id="lnkHome">Home</a>
-                    <a href="CadastroProduto.html" id="lnkCadastroProduuto">Produto</a>
-                    <a href="HistoricoVendas.html" id="lnkHistorioProduto">Historico de Pedidos</a>
+                    <a href="src/Views/CadastroProduto.html" id="lnkCadastroProduuto">Produto</a>
+                    <a href="src/Views/HistoricoVendas.html" id="lnkHistorioProduto">Historico de Pedidos</a>
                 </div>
-                <button onclick="imgButtonAlertClick()" style="padding-right: 2vw;"><img src="../images/sino.svg" alt="AlertClikBtn" id="imgAlerta" style="width: 1.5vw;"></button>
+                <button onclick="imgButtonAlertClick()" style="padding-right: 2vw;"><img src="src/images/sino.svg" alt="AlertClikBtn" id="imgAlerta" style="width: 1.5vw;"></button>
             </div>
         </div>
 
@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-    <script src="../js/script.js"></script>
-    <script src="../js/db.js"></script>
+    <script src="src/js/script.js"></script>
+    <script src="src/js/db.js"></script>
 </body>
 </html>
