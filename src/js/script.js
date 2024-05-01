@@ -4,7 +4,7 @@ function mostrarEquipamentos() {
 
     equipamentos.forEach(equipamento => {
         const elemento = document.createElement("a");
-        elemento.id = 'equipamentosId'
+        elemento.className = 'equipamentosId'
         elemento.href = '#'
         elemento.innerHTML = `<p id="tipo-equipamento"style="display: none">${equipamento.tipo}</p>
                               <div style="height: 75%; overflow: hidden; display: flex; justify-content:center"><img style="width: 100%; height: 80%; object-fit: contain; padding: .5vw" alt="imgProduto" id="imgProduto" src="src/images/${equipamento.tipo}.png"/></div>
@@ -23,12 +23,25 @@ function mostrarItens() {
 
     equipamentos.forEach(equipamento => {
         const elemento = document.createElement("tr");
-        elemento.innerHTML = `<td>${equipamento.id}</td>
+        elemento.innerHTML = `<td style="border-bottom-left-radius: 1vw;">${equipamento.id}</td>
                               <td>${equipamento.nome}</td>
                               <td>${equipamento.estado}</td>     
                               <td style="border: none; border-bottom-right-radius: 1vw;">${equipamento.preco}</td>`;
         container.appendChild(elemento);
     });
+}
+
+function mostrarDetalhe(){
+    const container = document.getElementById("infoDetalhe");
+    container.innerHTML = "";
+
+    equipamentos.forEach(equipamento => {
+        const elemento = document.createElement("tr");
+        elemento.innerHTML = `<td>ID do Produto: ${equipamento.id}</td>`;
+
+
+        container.appendChild(elemento);
+    })
 }
 
 function imgButtonAlertClick(){

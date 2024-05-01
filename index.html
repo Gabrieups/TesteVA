@@ -6,7 +6,7 @@
     <title>Venda de Ativos</title>
     <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body onload="mostrarEquipamentos()">
+<body onload="mostrarEquipamentos(), mostrarDetalhe()">
     <div class="main">
         <div id="divTopoPopUp">
             <div class="mainPopupAlerta">
@@ -95,6 +95,19 @@
 
             <div style="display: flex;">
                 <div id="ProdutosDisponiveis"></div>
+            </div>
+        </div>
+
+        <div id="divDetalheProduto">
+            <div class="mainPopupAlerta">
+                <div id="headerAlertaPopup">
+                    <p style="color: #fff; font-size: 1.3vw;">Detalhes do Produto</p>
+                    <button onclick="imgClose()"><img src="src/images/close.svg" alt="close" style="width: 1.5vw; position: relative; bottom: 1vw;"></button>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div id="imgDetalhe"></div>
+                    <table id="infoDetalhe"></table>
+                </div>
             </div>
         </div>
     </div>
